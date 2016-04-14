@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# learning rate
+learningRate=0.1
+
+# learning rate decay
+learningRateDecay=1e-7
+
+# weight decay
+weightDecay=1e-4
+
+# batch size
+batchSize=128
+
+# momentum
+momentum=0.9
+
+# threads
+threads=4
+
+# type
+type=cuda
+
+# devid
+devid=1
+
+# seed
+seed=1
+
+# maxEpoch
+maxEpoch=100
+
+# snapshot iteration
+snapshotIter=10
+
+# save
+save=result
+
+# exec
+./main.lua -r $learningRate -d $learningRateDecay -w $weightDecay \
+           -m $momentum -b $batchSize -t $threads -p $type -i $devid \
+           -s $seed -e $maxEpoch -o $save -n $snapshotIter
