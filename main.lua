@@ -121,7 +121,7 @@ end
 
 -- finally snapshot again
 -- save model
-local fout = paths.concat(opt.save, 'model.net')
+local fout = paths.concat(opt.save, 'model.t7')
 local lightModel = model:clone()
 lightModel:clearState()
 torch.save(fout, lightModel)

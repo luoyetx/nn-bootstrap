@@ -26,6 +26,9 @@ local function plot(trainLoss, testLoss)
   gnuplot.ylabel('loss')
   gnuplot.title('loss over epoches')
   gnuplot.plotflush()
+
+  -- close
+  gnuplot.closeall()
 end
 
 -- exports
