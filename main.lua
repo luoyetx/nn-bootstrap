@@ -40,7 +40,7 @@ paths.mkdir(opt.save)
 if opt.type == 'cuda' then
   print(sys.COLORS.red .. '==> switching to GPU')
 
-  -- load cunn, maybe can use cudnn
+  -- load cunn
   require 'cunn'
   cutorch.setDevice(opt.devid)
   print(sys.COLORS.red .. '==> use GPU #' .. cutorch.getDevice())

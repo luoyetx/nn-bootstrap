@@ -48,6 +48,14 @@ local criterion = nn.MSECriterion()
 if opt.type == 'cuda' then
   model:cuda()
   criterion:cuda()
+
+  -- load cudnn and convert model
+  require 'cudnn'
+
+  -- if gpu memory not an issue
+  cudnn.benchmark = true
+  cudnn.fastest = true
+  cudnn.convert(model, cudnn)
 end
 
 -- exports
