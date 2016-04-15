@@ -20,6 +20,7 @@ opt = lapp[[
   -e,--maxEpoch           (default 100)       max epoches
   -n,--snapshotIter       (default 10)        snapshot iteration
   -o,--save               (default result)    result folder
+  -l,--preModel           (default nil)       pre-trained model
 ]]
 
 -- print opt

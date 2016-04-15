@@ -58,6 +58,14 @@ if opt.type == 'cuda' then
   cudnn.convert(model, cudnn)
 end
 
+-- if use pre-trained model
+if opt.preModel ~= 'nil' then
+  require 'torch'
+
+  print(sys.COLORS.red .. '==> load model from ' .. opt.preModel)
+  model = torch.load(opt.preModel)
+end
+
 -- exports
 return {
   model = model,
